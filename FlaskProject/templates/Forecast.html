@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        p {text-align: center;}
+    </style>
+</head>
+<body>
+
+<h1>Weather App</h1>
+<button type="button" onclick="location.href='/'">Back to Weather</button>
+{% if city %}
+    <h2>Weather in {{ city }}</h2>
+    <p>Temperature: {{ temperature }}°C</p>
+    <p>Condition: {{ condition }}</p>
+    <p>Wind Speed: {{ wind_speed }} km/h</p>
+{% endif %}
+</body>
+</html>

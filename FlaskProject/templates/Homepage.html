@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<h1 class="text-3xl font-bold">
+    Weather App
+</h1>
+
+<hr class="border border-black-1000">
+
+
+<form action="/weather" method="post" class="text-center">
+    <label for="city"> Please enter City </label><br>
+    <input type="text" id="city" name="city" class="border border-gray-300"><br>
+    <input type="submit" value="Submit" class="bg-blue-600 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded mt-2">
+</form>
+
+<button type="button" onclick="location.href='/'">Back to Weather</button>
+
+<div class="flex items-center justify-between gap-10">
+    <p class="w-24">Some text</p>
+    <p>Click me</p>
+    <div class="w-24"></div>
+
+</div>
+{% if city %}
+    <h2>Weather in {{ city }}</h2>
+    <p>Temperature: {{ temperature }}°C</p>
+    <p>Condition: {{ condition }}</p>
+    <p>Wind Speed: {{ wind_speed }} km/h</p>
+{% endif %}
+
+{% if error %}
+    <p class="text-red-500 text-center">{{ error }}</p>
+{% endif %}
+
+</body>
+</html>
