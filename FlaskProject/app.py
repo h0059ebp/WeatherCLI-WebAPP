@@ -41,6 +41,9 @@ def weather_forecast(data, city): #This function prints the weather report
                            )
 
 
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
