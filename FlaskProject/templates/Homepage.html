@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js"
-      crossorigin async data-callback="initMapKit" data-libraries="map">
-  </script>
     <meta charset="UTF-8">
     <title>Weather App</title>
 
@@ -13,9 +10,7 @@
 <h1 class="text-3xl font-bold text-white">
     Weather App &#9925;
 </h1>
-
-
-
+ 
 <style>
     body {
         background: linear-gradient(to right, rgb(94, 92, 95), rgb(10, 8, 10)) no-repeat fixed;
@@ -40,10 +35,8 @@
 {% if city %}
 <div class="flex justify-center mt-4">
     <div class="bg-white rounded-lg shadow-md p-6 w-64">
-        <h1 class="font-bold">{
+        <h1 class="font-bold">
             Weather in {{ city }}
-
-
         </h1>
         <hr class="border border-black-1000">
         <p class="text-black">Temperature: {{ temperature }}°C</p>
